@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import developer.company.mynotes.R
-import developer.company.mynotes.db.Note
+import developer.company.mynotes.db.entities.Note
 import kotlinx.android.synthetic.main.note_layout.view.*
 
 class NotesAdapter(val notes: List<Note>) : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
