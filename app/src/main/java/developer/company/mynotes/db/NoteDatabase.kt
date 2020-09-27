@@ -4,8 +4,6 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import developer.company.mynotes.db.entities.Note
-import developer.company.mynotes.db.entities.NoteDao
 
 @Database(
     entities = [Note::class],

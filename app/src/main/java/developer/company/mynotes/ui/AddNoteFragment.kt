@@ -1,14 +1,16 @@
 package developer.company.mynotes.ui
 
 import android.app.AlertDialog
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.*
+import androidx.fragment.app.Fragment
+import android.widget.Toast
 import androidx.navigation.Navigation
 
 import developer.company.mynotes.R
-import developer.company.mynotes.db.entities.Note
+import developer.company.mynotes.db.Note
 import developer.company.mynotes.db.NoteDatabase
-import developer.company.mynotes.helper.toast
 import kotlinx.android.synthetic.main.fragment_add_note.*
 import kotlinx.coroutines.launch
 
@@ -56,10 +58,7 @@ class AddNoteFragment : BaseFragment() {
 
             launch {
                 context?.let {
-                    val mNote = Note(
-                        noteTittle,
-                        noteBody
-                    )
+                    val mNote = Note(noteTittle, noteBody)
 
                     if (note == null) {
                         NoteDatabase(it).getNoteDao().addNote(mNote)
